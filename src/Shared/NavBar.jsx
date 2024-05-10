@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../public/logo1.png";
 const NavBar = () => {
   const navLink = (
@@ -57,7 +57,9 @@ const NavBar = () => {
           <ul className="menu menu-horizontal px-1">{navLink}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+            
+          <Link to='/login'><a className="mr-1 btn btn-outline">LogIn</a></Link>
+          <Link to='/register'><a className="btn btn-outline">Register</a></Link>
         </div>
       </div>
     </div>
