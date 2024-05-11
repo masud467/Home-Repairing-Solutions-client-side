@@ -1,6 +1,16 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../public/logo1.png";
+import profile from "../../public/image/user.png"
+import { useContext } from "react";
+import  { AuthContext } from "../Providers/AuthProvider";
 const NavBar = () => {
+  const {logOut,user} = useContext(AuthContext)
+  const handleLogOut=()=>{
+    logOut()
+    .then(()=>{})
+    .catch(()=>{})
+  }
+  
   const navLink = (
     <>
       <NavLink to='/'>
@@ -17,6 +27,8 @@ const NavBar = () => {
       
     </>
   );
+
+  
 
   return (
     <div>
@@ -57,9 +69,53 @@ const NavBar = () => {
           <ul className="menu menu-horizontal px-1">{navLink}</ul>
         </div>
         <div className="navbar-end">
+        {/* <Link to='/login'><a className="mr-1 btn btn-outline">LogIn</a></Link>
+          <Link to='/register'><a className="btn btn-outline">Register</a></Link> */}
             
-          <Link to='/login'><a className="mr-1 btn btn-outline">LogIn</a></Link>
-          <Link to='/register'><a className="btn btn-outline">Register</a></Link>
+          {
+            user? <div className="flex items-center">
+            <div className="dropdown dropdown-end">
+              <label
+                tabIndex={0}
+                role="button"
+                className="btn btn-ghost btn-circle avatar"
+              >
+                <div className="w-10 rounded-full">
+                  <img src={user?.photoURL || profile} />
+                </div>
+              </label>
+              <ul
+                tabIndex={0}
+                className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <button className="btn btn-ghost btn-sm">
+                    {user?.displayName || ""}
+                  </button>
+                </li>
+                <li>
+                  <button className="btn btn-ghost btn-sm">
+                    {user.email}
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <Link>
+              <button
+                onClick={handleLogOut}
+                className="btn btn-accent btn-md text-xl font-medium"
+              >
+                LogOut
+              </button>
+            </Link>
+          </div>
+            :
+
+            <>
+            <Link to='/login'><a className="mr-1 btn btn-accent btn-md text-xl font-medium">LogIn</a></Link>
+          <Link to='/register'><a className="btn btn-accent btn-md text-xl font-medium">Register</a></Link>
+            </>
+          }
         </div>
       </div>
     </div>

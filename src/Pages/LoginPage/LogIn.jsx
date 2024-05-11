@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 
 
 const LogIn = () => {
-    const {loginUser} = useContext(AuthContext)
+    const {loginUser,loginWithGoogle} = useContext(AuthContext)
     const handleLogin =e=>{
        
         e.preventDefault()
@@ -33,6 +33,16 @@ const LogIn = () => {
                 text: "Invalid email or password. Please try again.",
                 
               });
+        })
+    }
+
+    const handleGoogle = ()=>{
+        loginWithGoogle()
+        .then(result=>{
+            console.log(result.user)
+        })
+        .catch(error=>{
+            console.error(error);
         })
     }
     return (
@@ -76,8 +86,15 @@ const LogIn = () => {
                 <div className="form-control mt-6">
                   <button className="btn btn-primary">Login</button>
                 </div>
-                <p>Do not have an account? <Link className="text-blue-600 underline" to='/register'>Register</Link></p>
+                
+                
               </form>
+              <p className="text-center">Do not have an account? <Link className="text-blue-600 underline " to='/register'>Register</Link></p>
+           
+                   <div className="p-3 mt-3">
+                   <button onClick={handleGoogle} className="btn btn-block btn-primary font-bold text-xl ">Google</button>
+                   </div>
+               
             </div>
           </div>
         </div>

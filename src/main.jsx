@@ -14,6 +14,7 @@ import Error from './Pages/ErrorPage/Error';
 import Register from './Pages/RegisterPage/Register';
 import LogIn from './Pages/LoginPage/LogIn';
 import AuthProvider from './Providers/AuthProvider';
+import AddService from './Pages/AddServices/AddService';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path:'/allServices',
         element:<AllServices></AllServices>
+      },
+      {
+        path:'/addServices',
+        element:<AddService></AddService>
       }
     ]
   },
