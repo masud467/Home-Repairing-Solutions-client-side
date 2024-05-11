@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import app from "../Firebase/Firebase.config";
 import { createContext, useState } from "react";
 
@@ -15,8 +15,13 @@ const AuthProvider = ({children}) => {
         return createUserWithEmailAndPassword(auth,email,password)
     }
 
+    const loginUser = (email,password)=>{
+        setLoading(false)
+        return signInWithEmailAndPassword(auth,email,password)
+    }
+
     const userInfo = {
-        user,createUser,loading
+        user,createUser,loading,loginUser
     }
     return (
         <AuthContext.Provider value={userInfo}>
