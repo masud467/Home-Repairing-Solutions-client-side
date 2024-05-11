@@ -1,9 +1,52 @@
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
+import Swal from "sweetalert2";
+
 const AddService = () => {
+    const {user} = useContext(AuthContext)
+    const handleAddService =e =>{
+        e.preventDefault()
+        const form = e.target 
+        const image = form.image.value
+        const name = form.name.value
+        const price = form.price.value
+        const area = form.area.value
+        const description = form.description.value
+        const providerEmail= user.email
+        const providerName= user.displayName
+        const providerImage= user.photoURL
+        form.reset()
+        // console.log(image,name,price,area,description,providerEmail,providerImage,providerName)
+
+        const newService = {image,name,price,area,description,providerEmail,providerImage,providerName}
+        // console.log(newService)
+
+        fetch('http://localhost:6003/addServices',{
+            method:"POST",
+            headers:{
+                "content-type":"application/json"
+            },
+            body:JSON.stringify(newService)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data)
+            if(data.insertedId){
+                Swal.fire({
+                    title: "Good job!",
+                    text: "Service added successfully!",
+                    icon: "success"
+                  });
+            }
+        })
+    }
+
+
   return (
     <div className="p-24 bg-[rgb(244,243,240)]">
         <h1 className="text-center text-3xl font-bold">Add new Services</h1>
       
-            <form className="">
+            <form onSubmit={handleAddService}>
                 {/* Service image and name row */}
               <div className="flex gap-4">
                 <div className="form-control md:w-1/2">
