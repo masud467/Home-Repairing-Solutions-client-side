@@ -83,7 +83,7 @@ const NavBar = () => {
                       <a>Add Services</a>
                     </li>
                   </NavLink>
-                  <NavLink to="/allServices">
+                  <NavLink to="/manageService">
                     <li>
                       <a>Manage Service</a>
                     </li>

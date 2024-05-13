@@ -18,6 +18,7 @@ import AddService from './Pages/AddServices/AddService';
 import PrivateRoute from './Routes/PrivateRoute';
 import ViewDetails from './Pages/ViewDetailsPage/ViewDetails';
 import Purchase from './Pages/PurchasePage/Purchase';
+import ManageService from './Pages/ManageServicePage/ManageService';
 
 const router = createBrowserRouter([
   {
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
         path:'/purchase/:id',
         element:<Purchase></Purchase>,
         loader:({params})=>fetch(`http://localhost:6003/purchase/${params.id}`)
+      },
+      {
+        path:'/manageService',
+        element:<PrivateRoute><ManageService></ManageService></PrivateRoute>
       }
     ]
   },
