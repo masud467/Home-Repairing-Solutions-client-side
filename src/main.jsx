@@ -15,6 +15,8 @@ import Register from './Pages/RegisterPage/Register';
 import LogIn from './Pages/LoginPage/LogIn';
 import AuthProvider from './Providers/AuthProvider';
 import AddService from './Pages/AddServices/AddService';
+import PrivateRoute from './Routes/PrivateRoute';
+import ViewDetails from './Pages/ViewDetailsPage/ViewDetails';
 
 const router = createBrowserRouter([
   {
@@ -40,7 +42,12 @@ const router = createBrowserRouter([
       },
       {
         path:'/addServices',
-        element:<AddService></AddService>
+        element:<PrivateRoute><AddService></AddService></PrivateRoute>
+      },
+      {
+        path:'/viewDetails/:id',
+        element:<PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
+        loader:({params})=>fetch(`http://localhost:6003/viewDetails/${params.id}`)
       }
     ]
   },

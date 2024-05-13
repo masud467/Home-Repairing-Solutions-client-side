@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
+
 const PopularServiceCard = ({service}) => {
-    const {image,name,price,description,providerImage,providerName} = service
+    const {_id,image,name,price,description,providerImage,providerName} = service
   return (
     <div>
       <div className=" flex flex-col justify-between p-6   h-full space-y-6 overflow-hidden  rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800">
@@ -36,7 +38,7 @@ const PopularServiceCard = ({service}) => {
           <p>Price: {price}</p>
         </div>
         <div> 
-        <button  className=" btn btn-block btn-primary flex items-center justify-center  p-3 font-semibold  rounded-md dark:bg-violet-600 dark:text-gray-50">View Details</button>
+        <Link to={`/viewDetails/${_id}`}><button   className=" btn btn-block btn-primary flex items-center justify-center  p-3 font-semibold  rounded-md dark:bg-violet-600 dark:text-gray-50">View Details</button></Link>
         </div>
         {/* <div className="flex flex-wrap justify-between">
           <div className="space-x-2">
