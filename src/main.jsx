@@ -19,6 +19,7 @@ import PrivateRoute from './Routes/PrivateRoute';
 import ViewDetails from './Pages/ViewDetailsPage/ViewDetails';
 import Purchase from './Pages/PurchasePage/Purchase';
 import ManageService from './Pages/ManageServicePage/ManageService';
+import Update from './Pages/UpdatePage/Update';
 
 const router = createBrowserRouter([
   {
@@ -59,6 +60,11 @@ const router = createBrowserRouter([
       {
         path:'/manageService',
         element:<PrivateRoute><ManageService></ManageService></PrivateRoute>
+      },
+      {
+        path:'/update/:id',
+        element:<PrivateRoute><Update></Update></PrivateRoute>,
+        loader:({params})=>fetch(`http://localhost:6003/update/${params.id}`)
       }
     ]
   },

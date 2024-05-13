@@ -60,7 +60,7 @@ const MangeServiceCard = ({ service,services,setServices }) => {
         <img
           src={image}
           alt=""
-          className="object-cover w-full mb-4 h-60 sm:h-96 dark:bg-gray-500"
+          className="object-cover w-full rounded-md mb-4 h-60 sm:h-96 dark:bg-gray-500"
         />
         <h2 className="mb-1 text-xl font-semibold">{name}</h2>
         <p className="text-sm dark:text-gray-600">{description}</p>
@@ -73,7 +73,7 @@ const MangeServiceCard = ({ service,services,setServices }) => {
         >
           Delete
         </button>
-        <Link>
+        <Link to={`/update/${_id}`}>
           <button className=" btn  w-1/3 btn-primary   p-3 font-semibold  rounded-md dark:bg-violet-600 dark:text-gray-50">
             Edit
           </button>
