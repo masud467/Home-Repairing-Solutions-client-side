@@ -17,6 +17,7 @@ import AuthProvider from './Providers/AuthProvider';
 import AddService from './Pages/AddServices/AddService';
 import PrivateRoute from './Routes/PrivateRoute';
 import ViewDetails from './Pages/ViewDetailsPage/ViewDetails';
+import Purchase from './Pages/PurchasePage/Purchase';
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,11 @@ const router = createBrowserRouter([
         path:'/viewDetails/:id',
         element:<PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
         loader:({params})=>fetch(`http://localhost:6003/viewDetails/${params.id}`)
+      },
+      {
+        path:'/purchase/:id',
+        element:<Purchase></Purchase>,
+        loader:({params})=>fetch(`http://localhost:6003/purchase/${params.id}`)
       }
     ]
   },

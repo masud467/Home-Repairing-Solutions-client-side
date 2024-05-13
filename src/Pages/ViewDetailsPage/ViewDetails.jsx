@@ -4,7 +4,7 @@ import { Link, useLoaderData } from "react-router-dom";
 const ViewDetails = () => {
 
     const service = useLoaderData()
-    const {image,name,price,area,description,providerImage,providerName} = service
+    const {_id,image,name,price,area,description,providerImage,providerName} = service
     return (
         <div>
             <div className="  p-6 w-full  h-full space-y-6 overflow-hidden  rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800">
@@ -42,7 +42,7 @@ const ViewDetails = () => {
           <p>Area: {area}</p>
         </div>
         <div> 
-        <Link ><button   className=" btn btn-block btn-primary flex items-center justify-center  p-3 font-semibold  rounded-md dark:bg-violet-600 dark:text-gray-50">Book Now</button></Link>
+        <Link to={`/purchase/${_id}`}><button   className=" btn btn-block btn-primary flex items-center justify-center  p-3 font-semibold  rounded-md dark:bg-violet-600 dark:text-gray-50">Book Now</button></Link>
         </div>
         
         
