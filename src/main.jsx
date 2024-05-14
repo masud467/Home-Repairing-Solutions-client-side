@@ -22,6 +22,7 @@ import ManageService from './Pages/ManageServicePage/ManageService';
 import Update from './Pages/UpdatePage/Update';
 import BookedService from './Pages/BookedService/BookedService';
 import { HelmetProvider } from 'react-helmet-async';
+import ServiceToDo from './Pages/ServiceToDo Page/ServiceToDo';
 
 const router = createBrowserRouter([
   {
@@ -72,6 +73,11 @@ const router = createBrowserRouter([
         path:'/bookedService',
         element:<PrivateRoute><BookedService></BookedService></PrivateRoute>,
         // loader:({params})=>fetch(`http://localhost:6003/bookedService/${params.email}`)
+      },
+      {
+        path:'/serviceToDo',
+        element:<PrivateRoute><ServiceToDo></ServiceToDo></PrivateRoute>,
+        
       }
     ]
   },
