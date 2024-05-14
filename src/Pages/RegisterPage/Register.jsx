@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
     const {createUser,user,loading} =useContext(AuthContext)
@@ -46,6 +47,9 @@ const Register = () => {
     if(user||loading) return
   return (
     <div>
+       <Helmet>
+                <title>Home Repairing Solutions|Register</title>
+            </Helmet>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col ">
           <div className="text-center lg:text-left">

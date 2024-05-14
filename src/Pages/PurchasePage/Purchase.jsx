@@ -3,6 +3,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import { useLoaderData } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 // import Swal from "sweetalert2";
 
 
@@ -67,6 +68,9 @@ const Purchase = () => {
     }
     return (
         <div className="p-24 bg-[rgb(244,243,240)]">
+           <Helmet>
+                <title>Home Repairing Solutions|Purchase</title>
+            </Helmet>
         <h1 className="text-center text-3xl font-bold"></h1>
       
             <form onSubmit={handlePurchaseService}>

@@ -2,6 +2,7 @@
 
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const BookedService = () => {
   // const bookedServices = useLoaderData()
@@ -23,7 +24,11 @@ const BookedService = () => {
   }
 
   return (
+    
     <section className="container px-4 mx-auto pt-12">
+       <Helmet>
+                <title>Home Repairing Solutions|BookedServices</title>
+            </Helmet>
       <div className="flex flex-col mt-6">
         <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">

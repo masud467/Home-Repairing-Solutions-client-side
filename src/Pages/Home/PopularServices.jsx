@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import PopularServiceCard from "../../Components/PopularServiceCard";
+import { Link } from "react-router-dom";
 
 
 const PopularServices = () => {
@@ -25,6 +26,7 @@ const PopularServices = () => {
             services.slice(0,6).map(service=> <PopularServiceCard key={service._id} service={service}></PopularServiceCard>)
            }
            </div>
+           <Link to='/allServices' className="flex items-center justify-center pt-5" ><button className="btn btn-primary w-1/6 text-xl font-bold  ">View All</button></Link>
         </div>
     );
 };

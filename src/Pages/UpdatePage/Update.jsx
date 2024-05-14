@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -47,6 +48,9 @@ const Update = () => {
     }
     return (
         <div className="p-24 bg-[rgb(244,243,240)]">
+           <Helmet>
+                <title>Home Repairing Solutions|Update</title>
+            </Helmet>
         <h1 className="text-center text-3xl font-bold">Update Services</h1>
       
             <form onSubmit={handleUpdateService}>

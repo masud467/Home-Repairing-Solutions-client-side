@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import axios from "axios";
 import MangeServiceCard from "../../Components/MangeServiceCard";
+import { Helmet } from "react-helmet-async";
 // import { Link } from "react-router-dom";
 
 
@@ -30,6 +31,9 @@ const ManageService = () => {
 
     return (
         <div className="grid grid-cols-2 gap-10">
+             <Helmet>
+                <title>Home Repairing Solutions|ManageServices</title>
+            </Helmet>
            
             
         {

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Link, useLoaderData } from "react-router-dom";
 
 
@@ -7,6 +8,9 @@ const ViewDetails = () => {
     const {_id,image,name,price,area,description,providerImage,providerName} = service
     return (
         <div>
+           <Helmet>
+                <title>Home Repairing Solutions|ViewDetails</title>
+            </Helmet>
             <div className="  p-6 w-full  h-full space-y-6 overflow-hidden  rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800">
         <div className="flex space-x-4">
           <img

@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const AddService = () => {
     const {user} = useContext(AuthContext)
@@ -44,6 +45,9 @@ const AddService = () => {
 
   return (
     <div className="p-24 bg-[rgb(244,243,240)]">
+      <Helmet>
+        <title>Home Repairing Solutions|AddServices</title>
+      </Helmet>
         <h1 className="text-center text-3xl font-bold">Add new Services</h1>
       
             <form onSubmit={handleAddService}>

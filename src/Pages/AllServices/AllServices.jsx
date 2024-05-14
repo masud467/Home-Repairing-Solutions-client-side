@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import AllServicesCard from "../../Components/AllServicesCard";
+import { Helmet } from "react-helmet-async";
 
 
 const AllServices = () => {
@@ -18,6 +19,9 @@ const AllServices = () => {
     },[])
     return (
         <div>
+            <Helmet>
+                <title>Home Repairing Solutions|AllServices</title>
+            </Helmet>
             <p className="text-center text-3xl font-bold mb-10">Our Services:</p>
            <div className="grid grid-cols-2 gap-10">
            {services&&
