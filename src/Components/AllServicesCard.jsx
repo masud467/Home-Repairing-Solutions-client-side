@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 
 
 const AllServicesCard = ({service}) => {
-    const {_id,image,name,price,description,providerImage,providerName} = service
+    const {_id,image,name,price,description,providerImage,providerName,area} = service
     return (
         <div>
-        <div className=" flex flex-col justify-between p-6   h-full space-y-6 overflow-hidden  rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800">
+        <div className=" flex flex-col  justify-between p-6   h-full space-y-6 overflow-hidden  rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800">
           <div className="flex space-x-4">
             <img
               alt=""
@@ -37,6 +37,7 @@ const AllServicesCard = ({service}) => {
               {description}
             </p>
             <p>Price: {price}</p>
+            <p>Area: {area}</p>
           </div>
           <div> 
           <Link to={`/viewDetails/${_id}`}><button   className=" btn btn-block btn-primary flex items-center justify-center  p-3 font-semibold  rounded-md dark:bg-violet-600 dark:text-gray-50">View Details</button></Link>

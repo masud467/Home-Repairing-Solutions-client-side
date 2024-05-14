@@ -20,6 +20,7 @@ import ViewDetails from './Pages/ViewDetailsPage/ViewDetails';
 import Purchase from './Pages/PurchasePage/Purchase';
 import ManageService from './Pages/ManageServicePage/ManageService';
 import Update from './Pages/UpdatePage/Update';
+import BookedService from './Pages/BookedService/BookedService';
 
 const router = createBrowserRouter([
   {
@@ -54,7 +55,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/purchase/:id',
-        element:<Purchase></Purchase>,
+        element:<PrivateRoute><Purchase></Purchase></PrivateRoute>,
         loader:({params})=>fetch(`http://localhost:6003/purchase/${params.id}`)
       },
       {
@@ -65,6 +66,11 @@ const router = createBrowserRouter([
         path:'/update/:id',
         element:<PrivateRoute><Update></Update></PrivateRoute>,
         loader:({params})=>fetch(`http://localhost:6003/update/${params.id}`)
+      },
+      {
+        path:'/bookedService',
+        element:<PrivateRoute><BookedService></BookedService></PrivateRoute>,
+        // loader:({params})=>fetch(`http://localhost:6003/bookedService/${params.email}`)
       }
     ]
   },

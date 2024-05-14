@@ -88,12 +88,12 @@ const NavBar = () => {
                       <a>Manage Service</a>
                     </li>
                   </NavLink>
-                  <NavLink to="/allServices">
+                  <NavLink to="/bookedService">
                     <li>
                       <a>Booked-Services</a>
                     </li>
                   </NavLink>
-                  <NavLink to="/allServices">
+                  <NavLink to="serviceToDo">
                     <li>
                       <a>Service-To-Do</a>
                     </li>

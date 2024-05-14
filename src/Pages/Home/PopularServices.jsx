@@ -15,9 +15,11 @@ const PopularServices = () => {
             console.error(error);
         })
     },[])
+
+    // {services?.slice(0,6).length}{" "}
     return (
         <div>
-            <p className="text-center text-3xl font-bold mb-10">Our Popular Services: {services?.slice(0,6).length}{" "}</p>
+            <p className="text-center text-3xl font-bold mb-10">Our Popular Services</p>
            <div className="grid grid-cols-2 gap-10">
            {services&&
             services.slice(0,6).map(service=> <PopularServiceCard key={service._id} service={service}></PopularServiceCard>)
