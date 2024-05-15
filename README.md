@@ -3,6 +3,7 @@
 2.Live site URL:  https://home-repairing-solutions.web.app
 
 3.Five bullet points to feature of my website: 
+
 1.Comprehensive Service Offerings: Wide range of services including plumbing, electrical repairs, painting and decorating, air conditioning maintenance, flooring installation, bathroom renovations, and window and door installation.
 
 2.Professional and Certified Technicians: Highly skilled and certified professionals ensuring quality and reliability in every service provided.
