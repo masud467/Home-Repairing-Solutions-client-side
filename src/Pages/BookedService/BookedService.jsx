@@ -73,6 +73,12 @@ const BookedService = () => {
                     >
                       Special instruction
                     </th>
+                    <th
+                      scope="col"
+                      className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500"
+                    >
+                      Status
+                    </th>
 
                     {/*   
                       <th
@@ -115,6 +121,9 @@ const BookedService = () => {
                       </td>
                       <td className="px-4 py-4 text-sm whitespace-nowrap text-gray-500">
                         {bookedService.instruction}
+                      </td>
+                      <td className="px-4 py-4 text-sm whitespace-nowrap text-gray-500">
+                        {bookedService.status}
                       </td>
 
                       {/* <td className='px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap'>
