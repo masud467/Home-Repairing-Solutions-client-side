@@ -6,7 +6,7 @@ const MangeServiceCard = ({ service,services,setServices }) => {
     service;
 
   const handleDelete = (id) => {
-    console.log(id);
+    // console.log(id);
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -17,7 +17,7 @@ const MangeServiceCard = ({ service,services,setServices }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:6003/addServices/${id}`,{
+        fetch(`https://home-repairing-solutions-for-server.vercel.app/addServices/${id}`,{
             method:"DELETE"
         })
           .then((res) => res.json())

@@ -9,16 +9,16 @@ import { Helmet } from "react-helmet-async";
 const ManageService = () => {
     const {user} =useContext(AuthContext)
     const [services,setServices] = useState([])
-    console.log("user info",user.email)
-    console.log("Service details",services)
+    // console.log("user info",user.email)
+    // console.log("Service details",services)
 
     
 
     useEffect(()=>{
-        axios.get(`http://localhost:6003/manageService/${user.email}`)
+        axios.get(`https://home-repairing-solutions-for-server.vercel.app/manageService/${user.email}`)
         .then(res=>{
             setServices(res.data)
-            console.log('res',res)
+            // console.log('res',res)
         })
         .catch(error=>{
             console.log(error)

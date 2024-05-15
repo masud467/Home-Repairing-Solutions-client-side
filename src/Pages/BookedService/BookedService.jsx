@@ -12,7 +12,7 @@ const BookedService = () => {
   const [bookedServices, setBookedServices] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:6003/bookedService/${user?.email}`)
+    fetch(`https://home-repairing-solutions-for-server.vercel.app/bookedService/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         // console.log(data)

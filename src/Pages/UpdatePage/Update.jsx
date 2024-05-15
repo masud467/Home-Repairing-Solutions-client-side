@@ -25,7 +25,7 @@ const Update = () => {
 
         const updateService = {image,name,price,area,description}
         console.log(updateService)
-        fetch(`http://localhost:6003/update/${_id}`,{
+        fetch(`https://home-repairing-solutions-for-server.vercel.app/update/${_id}`,{
             method:"PUT",
             headers:{
                 "content-type": "application/json",

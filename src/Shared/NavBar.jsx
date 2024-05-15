@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "/logo1.png";
-import profile from "../../public/image/user.png";
+import profile from "/user.png";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 const NavBar = () => {

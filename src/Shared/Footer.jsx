@@ -1,4 +1,4 @@
-import logo from "../../public/logo1.png";
+import logo from "/logo1.png";
 import { FaLinkedin } from "react-icons/fa";
 const Footer = () => {
   return (

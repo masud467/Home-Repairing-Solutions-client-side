@@ -9,7 +9,7 @@ const AllServices = () => {
     const [services,setServices]= useState()
 
     useEffect(()=>{
-        axios.get('http://localhost:6003/addServices')
+        axios.get('https://home-repairing-solutions-for-server.vercel.app/addServices')
         .then(res=>{
             setServices(res.data)
         })

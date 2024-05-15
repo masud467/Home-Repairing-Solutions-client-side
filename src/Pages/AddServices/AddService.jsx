@@ -22,7 +22,7 @@ const AddService = () => {
         const newService = {image,name,price,area,description,providerEmail,providerImage,providerName}
         // console.log(newService)
 
-        fetch('http://localhost:6003/addServices',{
+        fetch('https://home-repairing-solutions-for-server.vercel.app/addServices',{
             method:"POST",
             headers:{
                 "content-type":"application/json"

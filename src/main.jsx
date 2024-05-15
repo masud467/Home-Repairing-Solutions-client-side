@@ -53,12 +53,12 @@ const router = createBrowserRouter([
       {
         path:'/viewDetails/:id',
         element:<PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:6003/viewDetails/${params.id}`)
+        loader:({params})=>fetch(`https://home-repairing-solutions-for-server.vercel.app/viewDetails/${params.id}`)
       },
       {
         path:'/purchase/:id',
         element:<PrivateRoute><Purchase></Purchase></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:6003/purchase/${params.id}`)
+        loader:({params})=>fetch(`https://home-repairing-solutions-for-server.vercel.app/purchase/${params.id}`)
       },
       {
         path:'/manageService',
@@ -67,12 +67,12 @@ const router = createBrowserRouter([
       {
         path:'/update/:id',
         element:<PrivateRoute><Update></Update></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:6003/update/${params.id}`)
+        loader:({params})=>fetch(`https://home-repairing-solutions-for-server.vercel.app/update/${params.id}`)
       },
       {
         path:'/bookedService',
         element:<PrivateRoute><BookedService></BookedService></PrivateRoute>,
-        // loader:({params})=>fetch(`http://localhost:6003/bookedService/${params.email}`)
+        // loader:({params})=>fetch(`https://home-repairing-solutions-for-server.vercel.app/bookedService/${params.email}`)
       },
       {
         path:'/serviceToDo',

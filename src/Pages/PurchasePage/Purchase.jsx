@@ -32,7 +32,7 @@ const Purchase = () => {
         const bookService = {serviceId,name,price,serviceImage,providerEmail,providerName,userEmail,userName,date,instruction,status}
           
         try {
-            const {data} = await axios.post('http://localhost:6003/purchase',bookService)
+            const {data} = await axios.post('https://home-repairing-solutions-for-server.vercel.app/purchase',bookService)
             console.log(data)
             if(data.insertedId){
                         Swal.fire({
@@ -47,7 +47,7 @@ const Purchase = () => {
             console.log(err.message)
         }
 
-        // fetch('http://localhost:6003/addServices',{
+        // fetch('https://home-repairing-solutions-for-server.vercel.app/addServices',{
         //     method:"POST",
         //     headers:{
         //         "content-type":"application/json"
