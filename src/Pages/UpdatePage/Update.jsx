@@ -55,7 +55,7 @@ const Update = () => {
       
             <form onSubmit={handleUpdateService}>
                 {/* Service image and name row */}
-              <div className="flex gap-4">
+              <div className="lg:flex gap-4">
                 <div className="form-control md:w-1/2">
                   <label className="label">
                     <span className="label-text">Image URL</span>
@@ -84,7 +84,7 @@ const Update = () => {
                 </div>
               </div>
                 {/* Service Price and Service Area row */}
-              <div className="flex gap-4">
+              <div className="lg:flex gap-4">
                 <div className="form-control md:w-1/2">
                   <label className="label">
                     <span className="label-text">Price</span>

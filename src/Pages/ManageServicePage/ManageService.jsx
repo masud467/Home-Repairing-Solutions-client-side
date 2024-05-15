@@ -30,7 +30,7 @@ const ManageService = () => {
 
 
     return (
-        <div className="grid grid-cols-2 gap-10">
+        <div className="grid lg:grid-cols-2 gap-10">
              <Helmet>
                 <title>Home Repairing Solutions|ManageServices</title>
             </Helmet>

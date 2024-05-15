@@ -47,7 +47,9 @@ const ServiceToDo = () => {
 
    
   
-
+  if (toDoServices.length === 0) {
+    return <p className="text-center text-2xl font-bold">You have not provided any services yet.</p>;
+  }
   return (
     <div>
       <h1 className="text-2xl font-bold text-center">
@@ -56,7 +58,7 @@ const ServiceToDo = () => {
       <Helmet>
         <title>Home Repairing Solutions|ToDoServices</title>
       </Helmet>
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid lg:grid-cols-2 lg:gap-10">
         {toDoServices.map((service) => (
           <div
             key={service._id}
@@ -68,7 +70,7 @@ const ServiceToDo = () => {
                 alt=""
                 className="object-cover w-full rounded-md mb-4 h-60 sm:h-96 dark:bg-gray-500"
               />
-              <div className="flex justify-around">
+              <div className="lg:flex justify-around">
                 <div>
                   <h2 className="mb-1 text-xl font-semibold">{service.name}</h2>
                   <p className="font-bold">Buyer Email: {service.userEmail}</p>

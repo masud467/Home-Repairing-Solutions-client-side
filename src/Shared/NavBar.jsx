@@ -85,7 +85,7 @@ const NavBar = () => {
         <div className="navbar-end">
           {/* <Link to='/login'><a className="mr-1 btn btn-outline">LogIn</a></Link>
           <Link to='/register'><a className="btn btn-outline">Register</a></Link> */}
-           <label className="swap swap-rotate">
+           <label className="swap swap-rotate ">
             <input
               type="checkbox"
               onChange={handleToggle}
@@ -144,6 +144,7 @@ const NavBar = () => {
               </div>
               
 
+              <div className="lg:flex lg:flex-row">
               <div className="dropdown dropdown-end">
                 <label
                   tabIndex={0}
@@ -170,6 +171,7 @@ const NavBar = () => {
                   </li>
                 </ul>
               </div>
+              <div>
               <Link>
                 <button
                   onClick={handleLogOut}
@@ -178,6 +180,8 @@ const NavBar = () => {
                   LogOut
                 </button>
               </Link>
+              </div>
+              </div>
             </div>
           ) : (
             <>
