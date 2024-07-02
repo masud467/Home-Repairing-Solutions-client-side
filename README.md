@@ -1,4 +1,4 @@
-### Name of your website: Home Repairing Solutions
+### Name of my website: Home Repairing Solutions
 
 Live site URL:  https://home-repairing-solutions.web.app
 
